@@ -10,45 +10,101 @@
 <body>
 <div>
 	<h2>INCIDENT REPORTING FORM</h2>
-	<form class="form-style-4" action="" method="post">
-		<label for="inco">
-		<span>Incident No.</span><input type="number" name="inco" required="true" />
-		</label>
-		<label for="catno">
-		<span>Category No.</span><label class="radio-inline">
-			  <input type="radio" name="optradio" checked>Option 1
+	<form action="" method="post">
+		<div>
+			<label for="inco">
+			<span>Incident No. </span><input type="number" name="inco" required="true" />
+			</label><br>
+			<label for="catno">
+				<td class="rdbt"><label>Category No. </label></td>
+				<td class="rdbt">
+					<input id="Radio1"  type="radio" name="catno" value="I" /><label for="Radio1">I</label>
+					<input id="Radio2" type="radio" name="catno"value="II" /><label for="Radio2">II</label>
+					<input id="Radio3" type="radio" name="catno" value="III" /><label for="Radio3">III</label>
+					<input id="Radio4" type="radio" name="catno" value="IV" /><label for="Radio4">IV</label>
+					</td>
+			</label><br>
+			<label for="rcname">
+			<span>Recieved By </span><input type="text" name="rcname" required="true" />
+			</label><br>
+			<label for="fdate">
+			<span>Date </span><input type="date" id="fdate" name="fdate"><span> Time </span><input type="time" id="ftime" name="ftime">
 			</label>
-			<label class="radio-inline">
-			  <input type="radio" name="optradio">Option 2
+		</div>
+		<div>
+			<label for="type">
+				<td class="type">
+					<input id="inpatient"  type="radio" name="type" value="inpatient"/><label for="inpatient">INPATIENT</label>
+					<input id="outpatient" type="radio" name="type" value="outpatient"/><label for="outpatient">OUTPATIENT</label>
+					<input id="visitor" type="radio" name="type" value="visitor"/><label for="visitor">VISITOR</label>
+					<input id="employee" type="radio" name="type" value="employee"/><label for="employee">EMPLOYEE</label>
+					<input id="equip" type="radio" name="type" value="equipment/property"/><label for="equip">EQUIPMENT/PROPERTY</label>
+					</td>
 			</label>
-			<label class="radio-inline">
-			  <input type="radio" name="optradio">Option 3
+		</div>
+		<div>
+			<label for="name">
+				<span>Name </span><input type="text" name="name" required="true" />
 			</label>
-		</label>
-		<label for="rcname">
-		<span>Recieved By</span><input type="text" name="rcname" required="true" />
-		</label>
-		<label for="date">
-		<span>Date</span>
+			<label for="age">
+				<span>Age </span><input type="number" name="age" required="true" />
 			</label>
+			<label for="dpt">
+				<span>Department </span><input type="text" name="dpt" required="true" />
+			</label>
+		</div>
+		<div>
+			<label for="uhid">
+				<span>If Patient, UHID </span><input type="number" name="uhid" required="true" />
+			</label><br>
+			<label for="employee">
+				<span>If Employee, Please add  <br></span><span>Employee code </span><input type="number" name="empno" /><span>	Designation </span><input type="text" name="dsgn" />
+			</label>
+		</div>
+		<div>
+			<label for="gender"><span>Gender </span>
+				<input id="male" type="radio" name="gender" value="male"> <label for="male">Male</label>
+				<input id="female" type="radio" name="gender" value="female"> <label for="female">Female</label>
+			</label>
+		</div>
+		<div>
+			<span>Type of Incident</span>
+			<input type="checkbox" id="box1" name="box1" value=""><label for="box1"> Patient fall</label><br>
+			<input type="checkbox" id="box2" name="box2" value=""><label for="box2"> Medication Error</label><br>
+			<input type="checkbox" id="box3" name="box3" value=""><label for="box3"> Equipment Damage</label><br>
+			<input type="checkbox" id="box4" name="box4" value=""><label for="box4"> Infrastructural Issue</label><br>
+			<input type="checkbox" id="box5" name="box5" value=""><label for="box5"> Lab Error</label><br>
+			<input type="checkbox" id="box6" name="box6" value=""><label for="box6"> Identification Error</label><br>
+			<input type="checkbox" id="box7" name="box7" value=""><label for="box7"> Near Miss</label><br>
+			<input type="checkbox" id="box8" name="box8" value=""><label for="box8"> Sentinel Event</label><br>
+			<input type="checkbox" id="box9" name="box9" value=""><label for="box9"> Safety Issue</label><br>
+			<input type="checkbox" id="box10" name="box10" value=""><label for="box9"> Other</label><br>
+		</div>
+
+
+
+
+		<div><input type="submit" value="Submit" /></div>
 	</form>
-<!--<div class="form-style-8">
-  <h2>INCIDENT REPORTING FORM</h2>
-  <form>
-    <input type="number" name="inco" placeholder="Incident No." />
-	  
-    <input type="number" name="catno" placeholder="Category No." />
-	<labe></labe>
-    <input type="text" name="rcname" placeholder="Recieved By" />
-	<input type="date" name="date" />
-    <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
-    <input type="button" value="Submit" />
-  </form>
-</div>-->
 	<!--<textarea name="field4" onkeyup="adjust_textarea(this)" required="true"></textarea>
 		</label>
 		<label>
 		<span> </span><input type="submit" value="Send Letter" />-->
 </div>
+<script>
+	 function hideA(x) {
+   if (x.checked) {
+     document.getElementById("A").style.visibility = "hidden";
+     document.getElementById("B").style.visibility = "visible";
+   }
+ }
+
+ function hideB(x) {
+   if (x.checked) {
+     document.getElementById("B").style.visibility = "hidden";
+     document.getElementById("A").style.visibility = "visible";
+   }
+ }
+</script>
 </body>
 </html>

@@ -82,7 +82,7 @@
 				<option value="si">Safety Issue</option>
 				<option value="o">Other</option>
 			</select><br>
-			<textarea id="incbox" name="incbox" required="true" style="visibility: hidden ;" ></textarea>
+			<textarea id="incbox" name="incbox" required="true" style="display: none"; ></textarea>
 		</div>
 
 
@@ -96,9 +96,9 @@
         var selObj = document.getElementById("inctype");
         var selValue = selObj.options[selObj.selectedIndex].value;
 		if (selValue == "o")
-        	document.getElementById("incbox").style.visibility = "visible" ;
+        	document.getElementById("incbox").style.display = "block" ;
 		else
-        	document.getElementById("incbox").style.visibility = "hidden" ;
+        	document.getElementById("incbox").style.display = "none" ;
     }
 </script>
 </body>

@@ -84,9 +84,6 @@
 			<textarea id="incbox" name="incbox" required="true" style="visibility: hidden ;" ></textarea>
 		</div>
 
-	<label id="lbl">
-	</label>
-
 
 
 		<div><input type="submit" value="Submit" /></div>
@@ -107,12 +104,12 @@
 </div>
 <script>
 	function hide() {
-        //Getting Value
-        //var selValue = document.getElementById("singleSelectDD").value;
         var selObj = document.getElementById("inctype");
         var selValue = selObj.options[selObj.selectedIndex].value;
-        //Setting Value
-        document.getElementById("incbox").style.visibility = "visible" ;
+		if (selValue == "o")
+        	document.getElementById("incbox").style.visibility = "visible" ;
+		else
+        	document.getElementById("incbox").style.visibility = "hidden" ;
     }
 </script>
 </body>

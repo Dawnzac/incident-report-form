@@ -68,19 +68,24 @@
 			</label>
 		</div>
 		<div>
-			<span>Type of Incident</span>
-			<input type="checkbox" id="box1" name="box1" value=""><label for="box1"> Patient fall</label><br>
-			<input type="checkbox" id="box2" name="box2" value=""><label for="box2"> Medication Error</label><br>
-			<input type="checkbox" id="box3" name="box3" value=""><label for="box3"> Equipment Damage</label><br>
-			<input type="checkbox" id="box4" name="box4" value=""><label for="box4"> Infrastructural Issue</label><br>
-			<input type="checkbox" id="box5" name="box5" value=""><label for="box5"> Lab Error</label><br>
-			<input type="checkbox" id="box6" name="box6" value=""><label for="box6"> Identification Error</label><br>
-			<input type="checkbox" id="box7" name="box7" value=""><label for="box7"> Near Miss</label><br>
-			<input type="checkbox" id="box8" name="box8" value=""><label for="box8"> Sentinel Event</label><br>
-			<input type="checkbox" id="box9" name="box9" value=""><label for="box9"> Safety Issue</label><br>
-			<input type="checkbox" id="box10" name="box10" value=""><label for="box9"> Other</label><br>
+			<label for="inctype">Type of Incident</label>
+			<select id="inctype" onchange="hide()">
+				<option value="pf">Patient fall</option>
+				<option value="me">Medication Error</option>
+				<option value="ed">Equipment Damage</option>
+				<option value="ii">Infrastructural Issue</option>
+				<option value="le">Lab Error</option>
+				<option value="ie">Identification Error</option>
+				<option value="nm">Near Miss</option>
+				<option value="se">Sentinel Event</option>
+				<option value="si">Safety Issue</option>
+				<option value="o">Other</option>
+			</select><br>
+			<textarea id="incbox" name="incbox" required="true" style="visibility: hidden ;" ></textarea>
 		</div>
 
+	<label id="lbl">
+	</label>
 
 
 
@@ -89,22 +94,26 @@
 	<!--<textarea name="field4" onkeyup="adjust_textarea(this)" required="true"></textarea>
 		</label>
 		<label>
-		<span> </span><input type="submit" value="Send Letter" />-->
+		<span> </span><input type="submit" value="submit" />
+	if  ( checkbox.checked ) {
+		div.reveal();
+		textarea.disabled = false;
+	  } else {
+		div.dissolve();
+		textarea.value = '';
+		textarea.disabled = true;
+	  } 	
+	-->
 </div>
 <script>
-	 function hideA(x) {
-   if (x.checked) {
-     document.getElementById("A").style.visibility = "hidden";
-     document.getElementById("B").style.visibility = "visible";
-   }
- }
-
- function hideB(x) {
-   if (x.checked) {
-     document.getElementById("B").style.visibility = "hidden";
-     document.getElementById("A").style.visibility = "visible";
-   }
- }
+	function hide() {
+        //Getting Value
+        //var selValue = document.getElementById("singleSelectDD").value;
+        var selObj = document.getElementById("inctype");
+        var selValue = selObj.options[selObj.selectedIndex].value;
+        //Setting Value
+        document.getElementById("incbox").style.visibility = "visible" ;
+    }
 </script>
 </body>
 </html>

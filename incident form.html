@@ -70,6 +70,7 @@
 		<div>
 			<label for="inctype">Type of Incident</label>
 			<select id="inctype" onchange="hide()">
+				<option value="" disabled selected>Select your option</option>
 				<option value="pf">Patient fall</option>
 				<option value="me">Medication Error</option>
 				<option value="ed">Equipment Damage</option>
@@ -88,19 +89,7 @@
 
 		<div><input type="submit" value="Submit" /></div>
 	</form>
-	<!--<textarea name="field4" onkeyup="adjust_textarea(this)" required="true"></textarea>
-		</label>
-		<label>
-		<span> </span><input type="submit" value="submit" />
-	if  ( checkbox.checked ) {
-		div.reveal();
-		textarea.disabled = false;
-	  } else {
-		div.dissolve();
-		textarea.value = '';
-		textarea.disabled = true;
-	  } 	
-	-->
+	
 </div>
 <script>
 	function hide() {

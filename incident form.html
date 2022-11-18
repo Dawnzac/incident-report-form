@@ -81,10 +81,39 @@
 				<option value="se">Sentinel Event</option>
 				<option value="si">Safety Issue</option>
 				<option value="o">Other</option>
-			</select><br>
-			<textarea id="incbox" name="incbox" required="true" style="display: none"; ></textarea>
+			</select>
+			<input type="text" id="incbox" name="incbox" required="true" style="display: none"; >
 		</div>
-
+		<div>
+			<p><label for="incr">Incident Report in detail :</label></p>
+			<textarea name="incr" id="" cols="50" rows="10"></textarea>
+		</div>
+		<div>
+			<p><label for="imc">Immediate correction :</label></p>
+			<textarea name="imc" id="" cols="50" rows="5"></textarea>
+		</div>
+		<div>
+			<p><label for="yes_no_radio">Has immediate safety needs been met?</label>
+			<input type="radio" name="yes_no" checked>Yes</input>
+			<input type="radio" name="yes_no">No</input></p>
+			<p><label for="yes_no_radio2">Next of kin/guardian notified /patient ?</label>
+			<input type="radio" name="yes_no2" checked>Yes</input>
+			<input type="radio" name="yes_no2">No</input></p>
+		</div>
+		<div>
+			<p><label for="inj">Details of any injuries :</label></p>
+			<textarea name="inj" id="" cols="50" rows="2"></textarea>
+		</div>
+		<div>
+			<p><label for="cra">Corrective action taken & Outcome of action taken  :</label></p>
+			<textarea name="cra" id="" cols="50" rows="2"></textarea>
+		</div>
+		<div>
+			<label for="rpname">Reported by Name: </label>
+			<input type="text" name="rpname">    
+			<label for="sig">Signature: </label>
+			<input type="text" name="rpname">
+		</div>
 
 
 		<div><input type="submit" value="Submit" /></div>
@@ -96,7 +125,7 @@
         var selObj = document.getElementById("inctype");
         var selValue = selObj.options[selObj.selectedIndex].value;
 		if (selValue == "o")
-        	document.getElementById("incbox").style.display = "block" ;
+        	document.getElementById("incbox").style.display = "inline" ;
 		else
         	document.getElementById("incbox").style.display = "none" ;
     }

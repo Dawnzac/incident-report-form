@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .hidden {
+            display: none
+        }
+    </style>
+</head>
+
+<body style="background:#fff" class="m-3">
+
+    <div class="row d-flex justify-content-center ">
+
+        <form action="" method="post">
+            <div class="col-12 row ">
+                <hr>
+                <div class="col-6 row " style="border-right: solid 1px black;">
+                    <h2>INCIDENT REPORTING FORM</h2>
+                </div>
+                <div class="col-6 row ">
+
+                    <div class="form-group row">
+                        <div class="col-2 d-flex justify-content-end">
+                            <label for="inco" class="col-form-label">Incident No :</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="number" class="form-control" name="inco" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group row  mt-3">
+                        <div class="col-2 d-flex justify-content-end">
+                            <label for="catno" class="form-label">Category No :</label>
+                        </div>
+                        <div class="col-2 mx-3">
+                            <input id="Radio1" type="radio" name="catno" value="I" /><label for="Radio1">&nbspI</label>
+                        </div>
+                        <div class="col-2 ">
+                            <input id="Radio2" type="radio" name="catno" value="II" /><label
+                                for="Radio2">&nbspII</label>
+                        </div>
+                        <div class="col-2 ">
+                            <input id="Radio3" type="radio" name="catno" value="III" /><label
+                                for="Radio3">&nbspIII</label>
+                        </div>
+                        <div class="col-2 ">
+                            <input id="Radio4" type="radio" name="catno" value="IV" /><label
+                                for="Radio4">&nbspIV</label>
+                        </div>
+                    </div>
+                    <div class="form-group row mt-2">
+                        <div class="col-2 d-flex justify-content-end">
+                            <label for="rcname" class="col-form-label">Recieved By :</label>
+                        </div>
+
+                        <div class="col-9">
+                            <input type="text" class="form-control" name="rcname" required="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mt-3">
+                        <div class="col-2 d-flex justify-content-end">
+                            <label for="rcname" class="col-form-label">Date :</label>
+                        </div>
+
+                        <div class="col-3">
+                            <input type="date" class="form-control" id="fdate" name="fdate">
+                        </div>
+                        <div class="col-2 d-flex justify-content-end">
+                            <label for="rcname" class="col-form-label ">Time :</label>
+                        </div>
+
+                        <div class="col-3">
+                            <input type="time" id="ftime" name="ftime" class="form-control">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+    </div>
+    <div class="container">
+        <div class="form-group row mt-2  d-flex justify-content-center">
+            <div class="col ">
+                <input id="inpatient" type="radio" name="type" value="inpatient" />
+                <label for="inpatient" class="form-label">&nbsp INPATIENT</label>
+            </div>
+            <div class="col ">
+                <input id="outpatient" type="radio" name="type" value="outpatient" />
+                <label for="outpatient" class="form-label">&nbsp OUTPATIENT</label>
+            </div>
+            <div class="col ">
+
+                <input id="visitor" type="radio" name="type" value="visitor" />
+                <label for="visitor" class="form-label">&nbsp VISITOR</label>
+            </div>
+            <div class="col ">
+                <input id="employee" type="radio" name="type" value="employee" />
+                <label for="employee" class="form-label">&nbsp EMPLOYEE</label>
+            </div>
+            <div class="col ">
+                <input id="equip" type="radio" name="type" value="equipment/property" />
+                <label for="equip" class="form-label">&nbsp EQUIPMENT/PROPERTY</label>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container ">
+        <div class="form-group row mt-2 ">
+            <div class="col ">
+
+                <label for="name" class="form-label">Name :</label>
+
+            </div>
+            <div class="col ">
+                <input type="text" name="name" required="true" class="form-control" />
+            </div>
+            <div class="col d-flex justify-content-end">
+                <label for="age" class="col-form-label">Age :</label>
+            </div>
+
+            <div class="col">
+                <input type="number" class="form-control" required="true" name="age">
+            </div>
+            <div class="col d-flex justify-content-end">
+                <label for="dpt" class="col-form-label">Department :</label>
+            </div>
+
+            <div class="col">
+                <input type="text" class="form-control" name="dpt" required="true" />
+            </div>
+        </div>
+
+
+        <div class="form-group row mt-3 ">
+            <div class="col-2  uhid" >
+                <label for="uhid" class="col-form-label">If Patient, UHID :</label>
+            </div>
+            <div class="col-4  uhid" >
+                <input type="number" class="form-control" name="uhid" required="true">
+            </div>
+        </div>
+        
+        <div class="form-group row mt-3">
+            
+            <div class="col-12 " >
+                <label for="empno" class="col-form-label"> If Employee please add,</label>
+            </div>
+            <div class="col-2 " >
+                <label for="empno" class="col-form-label"> Employee Code:</label>
+            </div>
+            <div class="col-4  " >
+                <input type="number" class="form-control" name="empno" required="true">
+            </div>
+            <div class="col-2  d-flex justify-content-end" >
+                <label for="dsgn" class="col-form-label" >Designation:</label>
+            </div>
+            <div class="col-4 ">
+                <input type="number" class="form-control" name="dsgn" required="true">
+            </div>
+        </div>
+        <div class="form-group row mt-3">
+            <div class="col-2  ">
+                <label for="gender" class="form-label">Gender :</label>
+            </div>
+            <div class="col-2 ">
+                <input id="Radio1" type="radio" name="gender" value="male" /><label
+                    for="Radio1">&nbsp MALE</label>
+            </div>
+            <div class="col-2 ">
+                <input id="Radio2" type="radio" name="gender" value="female" /><label
+                    for="Radio2">&nbsp FEMALE</label>
+            </div>
+            <div class="col-2 ">
+                <input id="Radio2" type="radio" name="gender" value="other" /><label
+                    for="Radio2">&nbsp OTHER</label>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div>
+        <label for="gender"><span>Gender </span>
+            <input id="male" type="radio" name="gender" value="male"> <label for="male">Male</label>
+            <input id="female" type="radio" name="gender" value="female"> <label for="female">Female</label>
+        </label>
+    </div>
+    <div>
+        <label for="inctype">Type of Incident</label>
+        <select id="inctype" onchange="hide()">
+            <option value="" disabled selected>Select your option</option>
+            <option value="pf">Patient fall</option>
+            <option value="me">Medication Error</option>
+            <option value="ed">Equipment Damage</option>
+            <option value="ii">Infrastructural Issue</option>
+            <option value="le">Lab Error</option>
+            <option value="ie">Identification Error</option>
+            <option value="nm">Near Miss</option>
+            <option value="se">Sentinel Event</option>
+            <option value="si">Safety Issue</option>
+            <option value="o">Other</option>
+        </select><br>
+        <textarea id="incbox" name="incbox" required="true" style="display: none" ;></textarea>
+    </div>
+
+
+
+    <div><input type="submit" value="Submit" /></div>
+    </form>
+
+    </div>
+    <!-- <script>
+        function hide() {
+            var selObj = document.getElementById("inctype");
+            var selValue = selObj.options[selObj.selectedIndex].value;
+            if (selValue == "o")
+                document.getElementById("incbox").style.display = "block";
+            else
+                document.getElementById("incbox").style.display = "none";
+        }
+        function patienttype() {
+
+            var selObj = document.querySelector('input[name="emptype"]:checked').value;
+            if (selObj == "patient") {
+
+                console.log("patient")
+                document.getElementById("uhidlabel").style.display = "block";
+                document.getElementById("uhidinput").style.display = "block";
+                document.getElementById("empno").style.display = "none";
+                document.getElementById("dsgn").style.display = "none";
+                document.getElementById("empnoinput").style.display = "none";
+                document.getElementById("dsgninput").style.display = "none";
+            }
+            else if (selObj == "employee") {
+                console.log("empman")
+                document.getElementById("uhidlabel").style.display = "none";
+                document.getElementById("uhidinput").style.display = "none";
+                document.getElementById("empno").style.display = "block";
+                document.getElementById("dsgn").style.display = "block";
+                document.getElementById("empnoinput").style.display = "block";
+                document.getElementById("dsgninput").style.display = "block";
+            }
+            
+             else{
+            document.getElementById("uhidlabel").style.display = "none";
+                document.getElementById("uhidinput").style.display = "none";
+                document.getElementById("empno").style.display = "none";
+                document.getElementById("dsgn").style.display = "none";
+                document.getElementById("empnoinput").style.display = "none";
+                document.getElementById("dsgninput").style.display = "none";
+            }
+
+        }
+    </script> -->
+</body>
+
+</html>

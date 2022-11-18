@@ -25,93 +25,105 @@
         <form action="" method="post">
     
 
-    <div class="container ">
-        <div class="col-12 row ">
+    <div class="container">
+        <div class="row  justify-content-center ">
             <hr>
-            <div class="col-6 row " style="border-right: 1px solid #ced4da;">
+            <div class="col-6"  style="border-right: 1px solid #ced4da;">
                 <h2>INCIDENT REPORTING FORM</h2>
             </div>
 
-            <div class="mx-2 col-6 row ">
+            <div class=" col-6 " >
 
-                <div class="form-group row">
-                    <div class="col-2 d-flex justify-content-end">
-                        <label for="inco" class="col-form-label">Incident No :</label>
+                <div class="form-group row " >
+                    <div class="col-4 px-0 d-flex justify-content-end">
+                        <label for="inco" class="col-form-label ">Incident No :</label>
                     </div>
-                    <div class="col-9">
+                    <div class="col-8 ">
                         <input type="number" class="form-control" name="inco" required="true">
                     </div>
                 </div>
-                <div class="form-group row  mt-3">
-                    <div class="col-2 d-flex justify-content-end">
-                        <label for="catno" class="form-label">Category No :</label>
+                <div class="form-group row mt-2" >
+                    <div class="col-4 px-0 d-flex justify-content-end">
+                        <label for="catno" class="col-form-label">Category No :</label>
                     </div>
-                    <div class="col-2 mx-3">
-                        <input id="Radio1" type="radio" name="catno" value="I" /><label for="Radio1">&nbspI</label>
-                    </div>
-                    <div class="col-2 ">
-                        <input id="Radio2" type="radio" name="catno" value="II" /><label
-                            for="Radio2">&nbspII</label>
-                    </div>
-                    <div class="col-2 ">
-                        <input id="Radio3" type="radio" name="catno" value="III" /><label
-                            for="Radio3">&nbspIII</label>
-                    </div>
-                    <div class="col-2 ">
-                        <input id="Radio4" type="radio" name="catno" value="IV" /><label
-                            for="Radio4">&nbspIV</label>
+                    <div class="col-8 mt-2">
+                        <div class="form-group row " >
+                            <div class="col px-0 ">
+                                &nbsp&nbsp
+                                <input  id="Radio1" type="radio" name="catno" value="I" />
+                                <label for="Radio1" style="padding-right:0px;">&nbspI</label>
+                            </div>
+                            <div class="col   px-0">
+                                &nbsp
+                                <input id="Radio2" type="radio" name="catno" value="II" /><label
+                                    for="Radio2">&nbspII</label>
+                            </div>
+                            <div class="col   px-0">
+                                &nbsp
+                                <input id="Radio3" type="radio" name="catno" value="III" /><label
+                                    for="Radio3">&nbspIII</label>
+                            </div>
+                            <div class="col   px-0">
+                                &nbsp
+                                <input id="Radio4" type="radio" name="catno" value="IV" /><label
+                                    for="Radio4">&nbspIV</label>
+                            </div>
+
+
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row mt-2">
-                    <div class="col-2 d-flex justify-content-end">
+                    <div class="col-4 px-0 d-flex justify-content-end">
                         <label for="rcname" class="col-form-label">Recieved By :</label>
                     </div>
 
-                    <div class="col-9">
+                    <div class="col-8">
                         <input type="text" class="form-control" name="rcname" required="true">
                     </div>
                 </div>
 
                 <div class="form-group row mt-3">
-                    <div class="col-2 d-flex justify-content-end">
-                        <label for="rcname" class="col-form-label">Date :</label>
+                    <div class="col-4 px-0 d-flex justify-content-end">
+                        <label for="rcname" class="col-form-label">Date & Time :</label>
                     </div>
 
-                    <div class="col-3">
-                        <input type="date" class="form-control" id="fdate" name="fdate">
-                    </div>
-                    <div class="col-2 d-flex justify-content-end">
-                        <label for="rcname" class="col-form-label ">Time :</label>
-                    </div>
+                    <div class="col-8">
+                        <div class="row px-0">
+                            <div class="col-8 ">
+                                <input type="date" class="form-control" id="fdate" name="fdate">
+                            </div>
+                            <div class="col-4 px-0">
+                                <input type="time" id="ftime" name="ftime" class="form-control">
+                            </div>
 
-                    <div class="col-3">
-                        <input type="time" id="ftime" name="ftime" class="form-control">
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
         <hr>
-        <div class="form-group row mt-2  d-flex justify-content-center">
-            <div class="col ">
-                <input id="inpatient" type="radio" name="type" value="inpatient" />
+        <div class="form-group row mt-2  d-flex justify-content-center  ">
+            <div class="col-2   px-0 d-flex justify-content-center">
+                <input id="inpatient"  type="radio" class=" mb-2" name="type" value="inpatient" />
                 <label for="inpatient" class="form-label">&nbsp INPATIENT</label>
             </div>
-            <div class="col ">
-                <input id="outpatient" type="radio" name="type" value="outpatient" />
+            <div class="col-2 px-0   d-flex justify-content-center">
+                <input id="outpatient"  type="radio" class=" mb-2" name="type" value="outpatient" />
                 <label for="outpatient" class="form-label">&nbsp OUTPATIENT</label>
             </div>
-            <div class="col ">
+            <div class="col-2 px-0   d-flex justify-content-center">
 
-                <input id="visitor" type="radio" name="type" value="visitor" />
+                <input id="visitor"  type="radio" class=" mb-2" name="type" value="visitor" />
                 <label for="visitor" class="form-label">&nbsp VISITOR</label>
             </div>
-            <div class="col ">
-                <input id="employee" type="radio" name="type" value="employee" />
+            <div class="col-2 px-0   d-flex justify-content-center">
+                <input id="employee"  type="radio" class=" mb-2" name="type" value="employee" />
                 <label for="employee" class="form-label">&nbsp EMPLOYEE</label>
             </div>
-            <div class="col ">
-                <input id="equip" type="radio" name="type" value="equipment/property" />
+            <div class="col-4 px-0   d-flex justify-content-center">
+                <input id="equip"  type="radio" class=" mb-2" name="type" value="equipment/property" />
                 <label for="equip" class="form-label">&nbsp EQUIPMENT/PROPERTY</label>
             </div>
         </div>
@@ -236,6 +248,15 @@
 
         </div>
         <hr style="border-top: dotted 2px;" />
+
+        <div>
+			<p><label for="incr">Incident Report in detail :</label></p>
+			<textarea name="incr" id="" cols="50" rows="10"></textarea>
+		</div>
+		<div>
+			<p><label for="imc">Immediate correction :</label></p>
+			<textarea name="imc" id="" cols="50" rows="5"></textarea>
+		</div>
 
         <div class="form-group row mt-3 ">
             <div class="col-12  d-grid gap-2">

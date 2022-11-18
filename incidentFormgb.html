@@ -188,15 +188,42 @@
             </div>
         </div>
 
+        <div class="form-group row mt-3 ">
+            <div class="col ">
+
+                <label for="name" class="form-label">Incident Date :</label>
+
+            </div>
+            <div class="col ">
+                <input type="date" class="form-control" name="idate">
+            </div>
+            <div class="col d-flex justify-content-end">
+                <label for="itime" class="col-form-label">Time of Incident :</label>
+            </div>
+
+            <div class="col">
+                <input type="time" id="itime" name="itime" class="form-control">
+            </div>
+            <div class="col d-flex justify-content-end">
+                <label for="dpt" class="col-form-label">Location :</label>
+            </div>
+
+            <div class="col">
+                <input type="text" class="form-control" name="dpt" required="true" />
+            </div>
+        </div>
+
+        <div class="form-group row mt-3">
+            <div class="col-2  ">
+                <label for="inctype" class="form-label">Type of Incident :</label>
+            </div>
+
+        </div>
+        
+
     </div>
     </div>
 
-    <div>
-        <label for="gender"><span>Gender </span>
-            <input id="male" type="radio" name="gender" value="male"> <label for="male">Male</label>
-            <input id="female" type="radio" name="gender" value="female"> <label for="female">Female</label>
-        </label>
-    </div>
     <div>
         <label for="inctype">Type of Incident</label>
         <select id="inctype" onchange="hide()">

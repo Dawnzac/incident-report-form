@@ -25,7 +25,7 @@
         <form action="" method="post">
             <div class="col-12 row ">
                 <hr>
-                <div class="col-6 row " style="border-right: solid 1px black;">
+                <div class="col-6 row " style="border-right: 1px solid #ced4da;">
                     <h2>INCIDENT REPORTING FORM</h2>
                 </div>
                 <div class="col-6 row ">
@@ -217,29 +217,30 @@
             <div class="col-2  ">
                 <label for="inctype" class="form-label">Type of Incident :</label>
             </div>
+            <div class="col-6  ">
+                <select id="inctype" onchange="hide()" class="form-select">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="pf">Patient fall</option>
+                    <option value="me">Medication Error</option>
+                    <option value="ed">Equipment Damage</option>
+                    <option value="ii">Infrastructural Issue</option>
+                    <option value="le">Lab Error</option>
+                    <option value="ie">Identification Error</option>
+                    <option value="nm">Near Miss</option>
+                    <option value="se">Sentinel Event</option>
+                    <option value="si">Safety Issue</option>
+                    <option value="o">Other</option>
+                </select>
+            </div>
+            <div class="col-4  ">
+                <input id="incbox" name="incbox" required="true" style="display: none" class="form-control" placeholder="Please mention any other issues here">
+
+            </div>
 
         </div>
         
 
     </div>
-    </div>
-
-    <div>
-        <label for="inctype">Type of Incident</label>
-        <select id="inctype" onchange="hide()">
-            <option value="" disabled selected>Select your option</option>
-            <option value="pf">Patient fall</option>
-            <option value="me">Medication Error</option>
-            <option value="ed">Equipment Damage</option>
-            <option value="ii">Infrastructural Issue</option>
-            <option value="le">Lab Error</option>
-            <option value="ie">Identification Error</option>
-            <option value="nm">Near Miss</option>
-            <option value="se">Sentinel Event</option>
-            <option value="si">Safety Issue</option>
-            <option value="o">Other</option>
-        </select><br>
-        <textarea id="incbox" name="incbox" required="true" style="display: none" ;></textarea>
     </div>
 
 
@@ -248,7 +249,7 @@
     </form>
 
     </div>
-    <!-- <script>
+    <script>
         function hide() {
             var selObj = document.getElementById("inctype");
             var selValue = selObj.options[selObj.selectedIndex].value;
@@ -257,40 +258,40 @@
             else
                 document.getElementById("incbox").style.display = "none";
         }
-        function patienttype() {
+        // function patienttype() {
 
-            var selObj = document.querySelector('input[name="emptype"]:checked').value;
-            if (selObj == "patient") {
+        //     var selObj = document.querySelector('input[name="emptype"]:checked').value;
+        //     if (selObj == "patient") {
 
-                console.log("patient")
-                document.getElementById("uhidlabel").style.display = "block";
-                document.getElementById("uhidinput").style.display = "block";
-                document.getElementById("empno").style.display = "none";
-                document.getElementById("dsgn").style.display = "none";
-                document.getElementById("empnoinput").style.display = "none";
-                document.getElementById("dsgninput").style.display = "none";
-            }
-            else if (selObj == "employee") {
-                console.log("empman")
-                document.getElementById("uhidlabel").style.display = "none";
-                document.getElementById("uhidinput").style.display = "none";
-                document.getElementById("empno").style.display = "block";
-                document.getElementById("dsgn").style.display = "block";
-                document.getElementById("empnoinput").style.display = "block";
-                document.getElementById("dsgninput").style.display = "block";
-            }
+        //         console.log("patient")
+        //         document.getElementById("uhidlabel").style.display = "block";
+        //         document.getElementById("uhidinput").style.display = "block";
+        //         document.getElementById("empno").style.display = "none";
+        //         document.getElementById("dsgn").style.display = "none";
+        //         document.getElementById("empnoinput").style.display = "none";
+        //         document.getElementById("dsgninput").style.display = "none";
+        //     }
+        //     else if (selObj == "employee") {
+        //         console.log("empman")
+        //         document.getElementById("uhidlabel").style.display = "none";
+        //         document.getElementById("uhidinput").style.display = "none";
+        //         document.getElementById("empno").style.display = "block";
+        //         document.getElementById("dsgn").style.display = "block";
+        //         document.getElementById("empnoinput").style.display = "block";
+        //         document.getElementById("dsgninput").style.display = "block";
+        //     }
             
-             else{
-            document.getElementById("uhidlabel").style.display = "none";
-                document.getElementById("uhidinput").style.display = "none";
-                document.getElementById("empno").style.display = "none";
-                document.getElementById("dsgn").style.display = "none";
-                document.getElementById("empnoinput").style.display = "none";
-                document.getElementById("dsgninput").style.display = "none";
-            }
+        //      else{
+        //     document.getElementById("uhidlabel").style.display = "none";
+        //         document.getElementById("uhidinput").style.display = "none";
+        //         document.getElementById("empno").style.display = "none";
+        //         document.getElementById("dsgn").style.display = "none";
+        //         document.getElementById("empnoinput").style.display = "none";
+        //         document.getElementById("dsgninput").style.display = "none";
+        //     }
 
-        }
-    </script> -->
+        // }
+    </script>
 </body>
 
 </html>

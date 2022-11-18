@@ -16,9 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <style>
-        .hidden {
-            display: none;
-        }
+
         body {
 
             font-family: 'Roboto', sans-serif;
@@ -29,6 +27,7 @@
 </head>
 
 <body style="background:#fff" class="m-3">
+    
 
     <div class="row d-flex justify-content-center ">
 
@@ -39,11 +38,14 @@
         <div class="row  justify-content-center ">
             <hr>
             
-            <div class="col-6"  style="border-right: 1px solid #ced4da;">
-                <div class="row container">
+            <div class="col-xs-12 col-lg-6  "  >
+                <div class="row">
+                    <div class="">
                     <div class="col-12">
-                        <div class=""><img src="logo.png" class="img-fluid"></div>
+                        <div class="d-flex justify-content-center"><img src="logo.png" width="75%" class="img-fluid"></div>
                     </div>
+
+                    <div class="row text-center col-12">
                     <div class="col-4">
                         <i class='bx bx-globe' style="position:relative;top:3px;font-size: larger;"></i><a href="https://www.pushpagiri.in/" class="text-dark" style="text-decoration:none;"> www.pushpagiri.in</a>
                     </div>
@@ -53,6 +55,8 @@
                     <div class="col-4">
                         <i class='bx bx-phone' style="position:relative;top:3px;font-size: larger;"></i><a href="tel:+919447764722" class="text-dark" style="text-decoration:none;"> +91 944 77 647 22</a>
                     </div>
+                    </div>
+                </div>
                 
 
                     
@@ -62,26 +66,24 @@
                 <h5 class="text-center ">(All untoward incidents to be reported within 24 hours)</h5>
             </div>
 
-            <div class=" col-6 " >
+            <div class="col-xs-12 col-lg-6 mt-sm-4" >
 
-                <div class="form-group row mt-2" >
-                    <div class="col-4 px-0 d-flex justify-content-end">
+                <div class=" row mt-2" >
+                    <div class="col-sm-2 col-lg-3 px-sm-0 px-lg-2 justify-content-end  d-flex ">
                         <label for="inco" class="col-form-label ">Incident No :</label>
                     </div>
-                    <div class="col-8 ">
+                    <div class="col-sm-4  col-lg-9  ">
                         <input type="number" class="form-control" name="inco" required="true">
                     </div>
-                </div>
-                <div class="form-group row mt-2" >
-                    <div class="col-4 px-0 d-flex justify-content-end">
-                        <label for="catno" class="col-form-label">Category No :</label>
+                    <div class="col-sm-2 col-lg-3 px-0 d-flex justify-content-end  mt-lg-2">
+                        <label for="catno" class="col-form-label">Category Number :</label>
                     </div>
-                    <div class="col-8 mt-2">
+                    <div class="col-sm-4 col-lg-9 mt-2 mt-lg-3 ">
                         <div class="form-group row " >
                             <div class="col px-0 ">
-                                &nbsp&nbsp
+                                &nbsp&nbsp&nbsp&nbsp
                                 <input  id="Radio1" type="radio" name="catno" value="I" />
-                                <label for="Radio1" style="padding-right:0px;">&nbspI</label>
+                                <label for="Radio1" style="padding-right:0px;">I</label>
                             </div>
                             <div class="col   px-0">
                                 &nbsp
@@ -104,26 +106,24 @@
                     </div>
                 </div>
                 <div class="form-group row mt-2">
-                    <div class="col-4 px-0 d-flex justify-content-end">
+                    <div class="col-sm-2 col-lg-3 px-sm-0 px-lg-2 justify-content-end  d-flex ">
                         <label for="rcname" class="col-form-label">Recieved By :</label>
                     </div>
 
-                    <div class="col-8">
+                    <div class="col-sm-4  col-lg-9  ">
                         <input type="text" class="form-control" name="rcname" required="true">
                     </div>
-                </div>
 
-                <div class="form-group row ">
-                    <div class="col-4 px-0 d-flex justify-content-end">
+                    <div class="col-sm-1 col-lg-3 px-sm-0 px-lg-2 justify-content-end  d-flex mt-lg-3">
                         <label for="rcname" class="col-form-label">DateTime :</label>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-sm-5  col-lg-9  mt-lg-3">
                         <div class="row px-0">
                             <div class="col-7 ">
-                                <input type="date" class="form-control" id="fdate" name="fdate">
+                                <input type="date" class="form-control" id="fdate" name="fdate" placeholder="Date">
                             </div>
-                            <div class="col-5 px-0">
+                            <div class="col-5 px-2">
                                 <input type="time" id="ftime" name="ftime" class="form-control">
                             </div>
 
@@ -158,12 +158,12 @@
             </div>
         </div>
         <div class="form-group row mt-3 ">
-            <div class="col ">
+            <div class="col-2 ">
 
                 <label for="name" class="form-label">Name :</label>
 
             </div>
-            <div class="col ">
+            <div class="col-4 ">
                 <input type="text" name="name" required="true" class="form-control" />
             </div>
             <div class="col d-flex justify-content-end">
@@ -174,10 +174,10 @@
                 <input type="number" class="form-control" required="true" name="age">
             </div>
             <div class="col d-flex justify-content-end">
-                <label for="dpt" class="col-form-label">Department :</label>
+                <label for="dpt" class="col-form-label">Department  :</label>
             </div>
 
-            <div class="col">
+            <div class="col-3">
                 <input type="text" class="form-control" name="dpt" required="true" />
             </div>
         </div>
@@ -188,7 +188,7 @@
                 <label for="uhid" class="col-form-label">If Patient, UHID :</label>
             </div>
             <div class="col-9 col-xl-10 uhid" >
-                <input type="number" class="form-control-plaintext" name="uhid" required="true">
+                <input type="number" class="form-control" name="uhid" required="true">
             </div>
         </div>
         
@@ -201,13 +201,13 @@
                 <label for="empno" class="col-form-label"> Employee Code:</label>
             </div>
             <div class="col-xl-4 col-3" >
-                <input type="number" class="form-control-plaintext" name="empno" required="true">
+                <input type="number" class="form-control" name="empno" required="true">
             </div>
             <div class="col-2  d-flex justify-content-end" >
                 <label for="dsgn" class="col-form-label" >Designation:</label>
             </div>
             <div class="col-4 ">
-                <input type="number" class="form-control-plaintext" name="dsgn" required="true">
+                <input type="number" class="form-control" name="dsgn" required="true">
             </div>
         </div>
         <div class="form-group row mt-3">
@@ -302,16 +302,24 @@
 			<p><label for="inj" class="form-label">Details of any injuries :</label></p>
 			<textarea class="form-control rounded-0"  name="inj" id="" cols="50" rows="2"></textarea>
 		</div>
-		<div>
+		<div class="mt-3">
 			<p><label for="cra" class="form-label">Corrective action taken & Outcome of action taken  :</label></p>
 			<textarea class="form-control rounded-0"  name="cra" id="" cols="50" rows="2"></textarea>
 		</div>
-		<div class="form-group mt-3">
+
+		<div class="form-group mt-3 row">
+            <div class="col-lg-6">
 			<label for="rpname" class="form-label">Reported by Name: </label>
 			<input type="text" class="form-control" name="rpname">    
-			<label for="sig" class="form-lable">Signature: </label>
+            </div>
+            <div class="col-lg-6">
+			<label for="sig" class="form-label">Signature: </label>
 			<input type="text" class="form-control" name="rpname">
-		</div>
+            </div>
+        </div>
+    </div>
+        
+		
 
         <div class="form-group row mt-3 ">
             <div class="col-12  d-grid gap-2">

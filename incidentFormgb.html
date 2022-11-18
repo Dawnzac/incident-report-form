@@ -15,6 +15,7 @@
         .hidden {
             display: none
         }
+
     </style>
 </head>
 
@@ -83,17 +84,17 @@
                     </div>
                 </div>
 
-                <div class="form-group row mt-3">
+                <div class="form-group row ">
                     <div class="col-4 px-0 d-flex justify-content-end">
-                        <label for="rcname" class="col-form-label">Date & Time :</label>
+                        <label for="rcname" class="col-form-label">DateTime :</label>
                     </div>
 
-                    <div class="col-8">
+                    <div class="col-12">
                         <div class="row px-0">
-                            <div class="col-8 ">
+                            <div class="col-7 ">
                                 <input type="date" class="form-control" id="fdate" name="fdate">
                             </div>
-                            <div class="col-4 px-0">
+                            <div class="col-5 px-0">
                                 <input type="time" id="ftime" name="ftime" class="form-control">
                             </div>
 
@@ -127,7 +128,7 @@
                 <label for="equip" class="form-label">&nbsp EQUIPMENT/PROPERTY</label>
             </div>
         </div>
-        <div class="form-group row mt-2 ">
+        <div class="form-group row mt-3 ">
             <div class="col ">
 
                 <label for="name" class="form-label">Name :</label>
@@ -154,23 +155,23 @@
 
 
         <div class="form-group row mt-3 ">
-            <div class="col-2  uhid" >
+            <div class="col-3 col-xl-2 " >
                 <label for="uhid" class="col-form-label">If Patient, UHID :</label>
             </div>
-            <div class="col-4  uhid" >
+            <div class="col-9 col-xl-10 uhid" >
                 <input type="number" class="form-control" name="uhid" required="true">
             </div>
         </div>
         
-        <div class="form-group row mt-3">
+        <div class="form-group row mt-2">
             
             <div class="col-12 " >
-                <label for="empno" class="col-form-label"> If Employee please add,</label>
+                <label for="empno" class="col-form-label"> If Employee,</label>
             </div>
-            <div class="col-2 " >
+            <div class="col-xl-2 col-3" >
                 <label for="empno" class="col-form-label"> Employee Code:</label>
             </div>
-            <div class="col-4  " >
+            <div class="col-xl-4 col-3" >
                 <input type="number" class="form-control" name="empno" required="true">
             </div>
             <div class="col-2  d-flex justify-content-end" >
@@ -250,12 +251,37 @@
         <hr style="border-top: dotted 2px;" />
 
         <div>
-			<p><label for="incr">Incident Report in detail :</label></p>
-			<textarea name="incr" id="" cols="50" rows="10"></textarea>
+			<label for="incr" class="form-label">Incident Report in detail :</label>
+			<textarea class="form-control rounded-0" name="incr" id="" cols="50" rows="9"></textarea>
+		</div>
+		<div class="form-group mt-3">
+			<p><label for="imc" class="form-label">Immediate correction :</label></p>
+			<textarea name="imc" class="form-control rounded-0" id="" cols="50" rows="5"></textarea>
+		</div>
+
+
+
+        <div class="mt-3">
+			<label for="yes_no_radio" class="form-label">Has immediate safety needs been met?</label>
+			<input type="radio"  name="yes_no_radio" id="yes1" checked><label for="yes1">Yes</label>
+			<input type="radio" name="yes_no_radio" id="no1"><label for="no1">No</label></p>
+			<p><label for="yes_no_radio2">Next of kin/guardian notified /patient ?</label>
+			<input type="radio" name="yes_no_radio2" id="yes2" checked><label for="yes2">Yes</label>
+			<input type="radio" name="yes_no_radio2" id="no2"><label for="no2">No</label></p>
 		</div>
 		<div>
-			<p><label for="imc">Immediate correction :</label></p>
-			<textarea name="imc" id="" cols="50" rows="5"></textarea>
+			<p><label for="inj" class="form-label">Details of any injuries :</label></p>
+			<textarea class="form-control rounded-0"  name="inj" id="" cols="50" rows="2"></textarea>
+		</div>
+		<div>
+			<p><label for="cra" class="form-label">Corrective action taken & Outcome of action taken  :</label></p>
+			<textarea class="form-control rounded-0"  name="cra" id="" cols="50" rows="2"></textarea>
+		</div>
+		<div class="form-group mt-3">
+			<label for="rpname" class="form-label">Reported by Name: </label>
+			<input type="text" class="form-control" name="rpname">    
+			<label for="sig" class="form-lable">Signature: </label>
+			<input type="text" class="form-control" name="rpname">
 		</div>
 
         <div class="form-group row mt-3 ">
@@ -263,7 +289,6 @@
                 <input type="submit" class="btn btn-dark " value="Submit" />
              </div>
         </div>
-        
 
     </div>
     </div>

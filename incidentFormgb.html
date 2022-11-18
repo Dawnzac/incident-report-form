@@ -142,44 +142,32 @@
             </div>
         </div>
 
-        <div class="form-group row  mt-5 ">
-            <div class="col-2 d-flex ">
-                <label for="catno" class="form-label">Are you a :</label>
-            </div>
-            <div class="col-2 mx-3 d-flex justify-content-end">
-                <input id="Radio1" type="radio" name="emptype" value="patient" onchange="patienttype()" /><label
-                    for="Radio1">&nbsp Patient</label>
-            </div>
-            <div class="col-1 d-flex justify-content-center">
-                <label for="catno" class="form-label">or</label>
-            </div>
-            <div class="col-2 d-flex justify-content-start">
-                <input id="Radio2" type="radio" name="emptype" value="employee" onchange="patienttype()" /><label
-                    for="Radio2">&nbsp Employee</label>
-            </div>
-
-        </div>
 
         <div class="form-group row mt-3 ">
-            <div class="col-2  uhid" id="uhidlabel" style="display: none">
-                <label for="uhid" class="col-form-label">UHID :</label>
+            <div class="col-2  uhid" >
+                <label for="uhid" class="col-form-label">If Patient, UHID :</label>
             </div>
-            <div class="col-4  uhid" id="uhidinput" style="display: none">
+            <div class="col-4  uhid" >
                 <input type="number" class="form-control" name="uhid" required="true">
             </div>
         </div>
-        <div class="form-group row ">
-            <div class="col-2 " id="empno" style="display: none">
-                <label for="empno" class="col-form-label">Employee Code:</label>
+        
+        <div class="form-group row mt-3">
+            
+            <div class="col-12 " >
+                <label for="empno" class="col-form-label"> If Employee please add,</label>
             </div>
-            <div class="col-4  " id="empnoinput" style="display: none">
+            <div class="col-2 " >
+                <label for="empno" class="col-form-label"> Employee Code:</label>
+            </div>
+            <div class="col-4  " >
                 <input type="number" class="form-control" name="empno" required="true">
             </div>
             <div class="col-2  d-flex justify-content-end" >
-                <label for="dsgn" class="col-form-label" id="dsgn" style="display: none">Designation:</label>
+                <label for="dsgn" class="col-form-label" >Designation:</label>
             </div>
             <div class="col-4 ">
-                <input type="number" class="form-control" id="dsgninput" style="display: none" name="dsgn" required="true">
+                <input type="number" class="form-control" name="dsgn" required="true">
             </div>
         </div>
         <div class="form-group row mt-3">
@@ -233,7 +221,7 @@
     </form>
 
     </div>
-    <script>
+    <!-- <script>
         function hide() {
             var selObj = document.getElementById("inctype");
             var selValue = selObj.options[selObj.selectedIndex].value;
@@ -275,7 +263,7 @@
             }
 
         }
-    </script>
+    </script> -->
 </body>
 
 </html>

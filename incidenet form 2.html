@@ -10,10 +10,84 @@
     </head>
     <body>
         <div>
-         <h2></h2>   
+			<p><label for="probcse">Probable cause of Incident : (To be filled by Immediate Supervisor/Shift In-Charge) </label></p>
+			<textarea name="probcse" id="" cols="50" rows="2"></textarea>
+		</div>
+		<div>
+			<label for="name">
+				<span>Name </span><input type="text" name="name" required="true" />
+			</label>
+            <label for="dsgn">
+				<span>	Designation </span><input type="text" name="dsgn" />
+			</label>
+            <label for="sig">
+				<span>	signature </span><input type="text" name="sig" />
+			</label>
+			<label for="date">
+				<span>Date </span><input type="date" name="date" required="true" />
+			</label>
+		</div>
+        <div>
+        <label for="outcome">
+				<td class="rdbt"><label>Outcome of the Incident </label></td>
+				<td class="rdbt">
+					<input id="Radio1"  type="radio" name="outcome" value="" /><label for="Radio1"> Potential for Harm, Dangerous State but No Event </label>
+					<input id="Radio2" type="radio" name="outcome"value="" /><label for="Radio2">No adverse Outcome </label>
+					<input id="Radio3" type="radio" name="outcome" value="" /><label for="Radio3">Moderate Outcome : Minor Outcome plus Minor Diagnostic Investigations or Treatments </label>
+					<input id="Radio4" type="radio" name="outcome" value="" /><label for="Radio4">Significant Outcome: Hospital Admission or Increased Length of Stay/Morbidity Which continued at discharge </label>
+                    <input id="Radio5"  type="radio" name="outcome" value="" /><label for="Radio5">Potential for Harm, Dangerous State and Event Intercepted </label>
+					<input id="Radio6" type="radio" name="outcome"value="" /><label for="Radio6">Minor Outcome: Medical Review, Extra Observations or Monitoring </label>
+					<input id="Radio7" type="radio" name="outcome" value="" /><label for="Radio7">Moderate /Significant Outcome: Treatment with another drug, surgical intervention / cancellation, transfer to another area with no increased length of stay </label>
+					<input id="Radio8" type="radio" name="outcome" value="" /><label for="Radio8">Severe Outcome Permanent Disability or Contributed To the Patients Death </label>
+					</td>
+			</label>
         </div>
+        <div>	
+			<p><label for="inoud" class="form-label">Did the incident occur in or another unit/ department responsible for incident? </label>
+				<input type="radio"  name="inoud" value="yes" onchange="reveal()" ><label for="yes1">Yes</label>
+				<input type="radio" name="inoud" value="no" checked ><label for="no1">No</label>
+				<input type="text" id="inoudbox" name="inoud" required="true" style="display: none" placeholder="Please mention here"></p>
+		</div>
+        <div>
+			<p><label for="probcse">ROOT CAUSE ANALYSIS (To be Filled by Quality Assurance Department) </label><br>
+			<textarea name="probcse" id="" cols="50" rows="2"></textarea></p>
+		</div>
+        <div>
+			<p><label for="prvac">Preventive Action (by the Incident Report Committee): </label><br>
+			<textarea name="prvac" id="" cols="50" rows="2"></textarea></p>
+		</div>
+		<div>
+			<p><label for="autsgn">Authorized Signatory : </label>
+				<select id="inctype" onchange="hide()">
+					<option value="" disabled selected> Select </option>
+					<option value="ha">HA</option>
+					<option value="md">MD</option>
+					<option value="cqm">CQM</option>
+					<option value="cno">CNO</option>
+				</select></p>
+		</div>
+		<div>
+			<label for="agname">
+				<span>Name </span><input type="text" name="name" required="true" />
+			</label>
+            <label for="agsig">
+				<span>	signature </span><input type="text" name="sig" />
+			</label>
+			<label for="agseal">
+				<span>Seal </span><input type="text" name="date" required="true" />
+			</label>
+		</div>
+
        
-    <script src="" async defer>
+    <script>
+		function reveal() {
+
+			var selObj = document.querySelector('input[name="inoud"]:checked').value;
+			if (selObj == "yes")
+				document.getElementById("inoudbox").style.display = "inline";
+			else
+				document.getElementById("inoudbox").style.display = "none";
+				}
 
     </script>
     </body>

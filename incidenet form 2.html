@@ -20,26 +20,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body style="background:#fff" class="m-3">
+		<div class="row d-flex justify-content-center">
 		<hr style="border-top: dotted 2px;" />
         <div class="form-label">
-			<p><label for="probcse" class="form-label">Probable cause of Incident : (To be filled by Immediate Supervisor/Shift In-Charge) </label></p>
-			<textarea name="probcse" id="" class="form-label" cols="50" rows="2"></textarea>
+			<p><label for="pr obcse" class="form-label">Probable cause of Incident : (To be filled by Immediate Supervisor/Shift In-Charge) </label></p>
+			<textarea name="probcse" id="" class="form-control rounded-0" cols="50" rows="2"></textarea>
 		</div>
-		<div>
-			<label for="name">
-				<span>Name </span><input type="text" name="name" required="true" />
-			</label>
-            <label for="dsgn">
-				<span>	Designation </span><input type="text" name="dsgn" />
-			</label>
-            <label for="sig">
-				<span>	signature </span><input type="text" name="sig" />
-			</label>
-			<label for="date">
-				<span>Date </span><input type="date" name="date" required="true" />
-			</label>
-		</div>
+		<div class="form-group row mt-3 ">
+            <div class="col">
+                <label for="name" class="col-form-label">Name :</label>
+            </div>
+            <div class="col-3">
+                <input type="text" name="name" required="true" class="form-control" />
+            </div>
+
+            <div class="col d-flex justify-content-end">
+                <label for="dsgn" class="col-form-label">Designation :</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" required="true" name="dsgn">
+            </div>
+
+            <div class="col d-flex justify-content-end">
+                <label for="sig" class="col-form-label">Signature  :</label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control" name="sig" required="true" />
+            </div>
+
+			<div class="col d-flex justify-content-end">
+                <label for="date" class="col-form-label">Date  :</label>
+            </div>
+            <div class="col-3">
+                <input type="date" class="form-control" name="date" required="true" />
+            </div>
+        </div>
         <div>
         <label for="outcome">
 				<td class="rdbt"><label>Outcome of the Incident </label></td>
@@ -56,22 +72,22 @@
 			</label>
         </div>
         <div>	
-			<p><label for="inoud" class="form-label">Did the incident occur in or another unit/ department responsible for incident? </label>
+			<p><label for="inoud" class="form-label mt-2 ">Did the incident occur in or another unit/ department responsible for incident? </label>
 				<input type="radio"  name="inoud" value="yes" onchange="reveal()" ><label for="yes1">Yes</label>
 				<input type="radio" name="inoud" value="no" checked ><label for="no1">No</label>
 				<input type="text" id="inoudbox" name="inoud" required="true" style="display: none" placeholder="Please mention here"></p>
 		</div>
         <div>
 			<p><label for="probcse">ROOT CAUSE ANALYSIS (To be Filled by Quality Assurance Department) </label><br>
-			<textarea name="probcse" id="" cols="50" rows="2"></textarea></p>
+			<textarea name="probcse" id="" class="form-control rounded-0" cols="50" rows="2"></textarea></p>
 		</div>
         <div>
 			<p><label for="prvac">Preventive Action (by the Incident Report Committee): </label><br>
-			<textarea name="prvac" id="" cols="50" rows="2"></textarea></p>
+			<textarea name="prvac" id="" class="form-control rounded-0" cols="50" rows="2"></textarea></p>
 		</div>
-		<div>
-			<p><label for="autsgn">Authorized Signatory : </label>
-				<select id="inctype" onchange="hide()">
+		<div class="form-group row mt-3">
+			<p><label class="form-label" for="autsgn">Authorized Signatory : </label>
+				<select id="inctype" onchange="hide()" class="form-select" >
 					<option value="" disabled selected> Select </option>
 					<option value="ha">HA</option>
 					<option value="md">MD</option>
@@ -79,19 +95,19 @@
 					<option value="cno">CNO</option>
 				</select></p>
 		</div>
-		<div>
-			<label for="agname">
-				<span>Name </span><input type="text" name="name" required="true" />
+		<div class="form-group row mt-3">
+			<label class="col" for="agname">
+				<span>Name </span><input type="text" name="name" class="form-control" required="true" />
 			</label>
-            <label for="agsig">
-				<span>	signature </span><input type="text" name="sig" />
+            <label class="col" for="agsig">
+				<span>	signature </span><input type="text" name="sig" class="form-control"/>
 			</label>
-			<label for="agseal">
-				<span>Seal </span><input type="text" name="date" required="true" />
+			<label class="col" for="agseal">
+				<span>Seal </span><input type="text" name="date" class="form-control" required="true" />
 			</label>
 		</div>
 
-       
+	</div>       
     <script>
 		function reveal() {
 
@@ -103,5 +119,5 @@
 				}
 
     </script>
-    </body>
+</body>
 </html>
